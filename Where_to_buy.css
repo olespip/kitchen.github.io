@@ -1,0 +1,428 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Задает минимальную высоту для body */
+    background-color: #606C38; /* Фон за формой */
+}
+
+/*шапка*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFAE0;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 20px;
+}
+
+.navigation a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+
+@media (max-width: 1024px) {
+    .navigation li {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .navigation li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/*щ компании*/
+.container {
+    display: flex; /* Используем flexbox для расположения элементов */
+    height: auto; /* Высота контейнера автоматически подстраивается */
+    max-width: 100%; /* Устанавливаем максимальную ширину контейнера */
+   
+    overflow: hidden; /* Скрываем переполнение */
+}
+.container img {
+    width: 50%; /* Ширина изображения 30% */
+    height: auto; /* Высота изображения автоматически подстраивается */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+}
+.text {
+    display: flex; /* Используем flexbox для текста */
+    flex-direction: column; /* Вертикальное расположение текста */
+    justify-content: center; /* Центрируем текст по вертикали */
+    padding: 40px; /* Отступы внутри текстового блока */
+    width: 70%; /* Ширина текстового блока 70% */
+    background-color:  #606C38; /* Цвет фона текстового блока */
+    color: #FEFAE0;
+    font-size: 30px;
+}
+
+/* Адаптивность для экранов до 1024px (ноутбуки) */
+@media (max-width: 1024px) {
+    .text h2 {
+        font-size: 2.5em; /* Увеличиваем размер заголовка */
+    }
+    .text p {
+        font-size: 1.2em; /* Увеличиваем размер текста */
+    }
+
+}
+
+/* Адаптивность для экранов до 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Изменяем направление на колонку */
+        max-width: 100%; /* Устанавливаем максимальную ширину контейнера */
+        margin: 0 0; /* Центрируем контейнер по горизонтали */
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container img {
+        width: 100%; /* Изображение занимает всю ширину */
+        height: auto; /* Высота изображения автоматически подстраивается */
+        
+    }
+   
+  
+    .text {
+        width: 100%; /* Текст занимает всю ширину */
+        padding: 0 5px 0 5px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+.block {
+    
+    padding: 20px; /* Добавляем отступы внутри блоков */
+/* Цвет текста внутри блоков */
+}
+
+/* Цвета для блоков */
+.about-company, .advantages {
+    background-color: #606C38; /* Цвет фона для блоков 1 и 3 */
+}
+
+.partners, .contacts {
+    background-color: #FEFAE0; /* Цвет фона для блоков 2 и 4 */
+    padding: 40px; /* Увеличиваем внутренние отступы для блоков 2 и 4 */
+    width: 100%; /* Растягиваем блоки на всю ширину страницы */
+    box-sizing: border-box; /* Учитываем отступы в ширине блока */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.advan{
+    margin-right: 20px;
+    font-size: 26px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-image {
+    max-width: 600px; /* Максимальная ширина изображения */
+    height: auto; /* Автоматическая высота */
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Чтобы логотипы переходили на следующую строку на маленьких экранах */
+}
+
+.partners-logos img {
+    max-width: 120px; /* Максимальная ширина логотипов */
+    height: 100px;/* Автоматическая высота */
+}
+
+.advantages-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем иконки с текстом */
+}
+
+.advantage {
+    display: flex;
+    flex-direction: column; /* Вертикальное выравнивание иконок и текста */
+    align-items: center; /* Центрируем содержимое */
+    margin-left: 10px;
+    width: 150px; /* Ширина иконок с текстом */
+}
+
+.advantage-icon {
+    width: 50px;
+    margin-bottom: 10px; /* Отступ между иконкой и текстом */
+}
+
+.contacts-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map {
+    flex: 1; /* Занимает оставшееся пространство */
+    margin-right: 20px; /* Отступ справа */
+}
+
+iframe{
+    width: 800px;
+    height: 400px;
+}
+
+.addresses {
+    flex: 1; /* Занимает оставшееся пространство */
+
+}
+
+.maps{
+    font-size: 20px;
+}
+
+
+footer {
+    background-color: #283618; /* Цвет футера */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Увеличение отступов подвала */
+    font-size: 1.2em; /* Увеличение размера шрифта в подвале */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Увеличение отступа между ссылками */
+}
+/* Адаптивные стили */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column; /* Вертикальное выравнивание для заголовка на маленьких экранах */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    .about-content {
+        flex-direction: column; /* Вертикальное выравнивание для блока "О компании" */
+        align-items: center; /* Центрируем содержимое */
+    }
+
+    .part{
+        margin-bottom: 15px;
+    }
+    
+
+    .about-image {
+        max-width: 100%; /* Изображение адаптируется к ширине экрана */
+
+    }
+
+    .partners-logos {
+        flex-direction: column; /* Вертикальное выравнивание для логотипов */
+        align-items: center; /* Центрируем логотипы */
+    }
+
+    .advantages-content {
+        flex-direction: column; /* Вертикальное выравнивание для преимуществ */
+        align-items: center; /* Центрируем преимущества */
+    }
+
+    .advantage {
+        width: 90%; /* Ширина иконок с текстом */
+    }
+
+    .contacts-content {
+        flex-direction: column; /* Вертикальное выравнивание для контактов */
+        align-items: center; /* Центрируем содержимое */
+    }
+
+.map {
+    flex: 1; /* Занимает оставшееся пространство */
+    margin-right: 20px; /* Отступ справа */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column; /* Вертикальное выравнивание для заголовка на маленьких экранах */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Вертикальное выравнивание для заголовка на маленьких экранах */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальное выравнивание навигации */
+        margin-top: 10px; /* Отступ сверху для навигации */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Убираем отступ слева для пунктов навигации */
+        margin-bottom: 10px; /* Отступ между пунктами навигации */
+    }
+
+    .store-item {
+        margin: 10px 0; /* Уменьшаем отступы между магазинами */
+        padding: 15px; /* Уменьшаем внутренние отступы для магазинов */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Уменьшаем размер заголовка для мобильных устройств */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Уменьшаем размер заголовка для секции "Наши партнеры" */
+    }
+
+    footer {
+        font-size: 0.9em; /* Уменьшаем размер шрифта в подвале */
+    }
+}
+@media (max-width: 320px) {
+    header {
+        flex-direction: column; /* Вертикальное выравнивание для заголовка на маленьких экранах */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальное выравнивание навигации */
+        margin-top: 10px; /* Отступ сверху для навигации */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Убираем отступ слева для пунктов навигации */
+        margin-bottom: 5px; /* Отступ между пунктами навигации */
+    }
+
+    .advan{
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .part{
+        margin-bottom: 15px;
+    }
+
+    
+    .advantage {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание иконок и текста */
+        align-items: center; /* Центрируем содержимое */
+        margin: 10px;
+        width: 150px; /* Ширина иконок с текстом */
+    }
+    
+.map {
+    flex: 1; /* Занимает оставшееся пространство */
+    margin-right: 20px; /* Отступ справа */
+    width: 100px;
+    height: 100px;
+
+}
+    .store-item {
+        margin: 5px 0; /* Уменьшаем отступы между магазинами */
+        padding: 8px; /* Уменьшаем внутренние отступы для магазинов */
+    }
+
+    h1 {
+        font-size: 1.3em; /* Уменьшаем размер заголовка для мобильных устройств */
+    }
+
+    h2 {
+        font-size: 1em; /* Уменьшаем размер заголовка для секции "Наши партнеры" */
+    }
+}
+@media (max-width: 1024px) {
+    .map {
+        width: 100%; /* Изображение занимает всю ширину */
+        height: auto; /* Высота изображения автоматически подстраивается */
+    }
+    .contacts-content {
+        flex-direction: column; /* Вертикальное выравнивание для контактов */
+        align-items: center; /* Центрируем содержимое */
+    }
+}

@@ -1,0 +1,233 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Задает минимальную высоту для body */
+    background-color: #606C38; /* Фон за формой */
+}
+
+/*шапка*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFAE0;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 20px;
+}
+
+.navigation a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+
+@media (max-width: 1024px) {
+    .navigation li {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .navigation li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+}
+input {
+    width: 90%; /* Уменьшение ширины полей ввода до 90% */
+    height: 20px; /* Уменьшение высоты полей ввода до 50px */
+    padding: 10px; /* Внутренние отступы */
+    margin-top: 20px;
+    margin-bottom: 15px; /* Отступ снизу между полями */
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 5px; /* Закругленные углы полей */
+    font-size: 1em; /* Размер шрифта в полях */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Внутренний теневой эффект */
+    transition: border-color 0.3s; /* Плавный переход цвета рамки */
+}
+label{
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+select{
+    width: 90%; /* Уменьшение ширины полей ввода до 90% */
+    height: 35px; /* Уменьшение высоты полей ввода до 50px */
+    
+}
+
+input:focus, select:focus {
+    border-color: #283618; /* Цвет рамки при фокусе */
+    outline: none; /* Убираем стандартный контур */
+}
+
+button {
+    margin-top: 20px;
+    width: auto; /* Автоматическая ширина кнопки */
+    height: 30px; /* Уменьшение высоты кнопки */
+    background-color: #283618; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    font-size: 0.9em; /* Уменьшение размера шрифта в кнопке */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+    display: inline-flex; /* Выровнять по уровню текста */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+button:hover {
+    background-color: #FEFAE0; /* Цвет кнопки при наведении */
+    color: #283618; /* Цвет текста кнопки при наведении */
+}
+
+a{
+     color: Green; /* Черный цвет ссылок в навигации */
+    text-decoration: none;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px; /* Увеличение максимальной ширины контейнера */
+    margin: auto; /* Центрирование контейнера */
+    padding: 30px; /* Увеличение отступов контейнера */
+    background-color: #DDA15E; /* Цвет контейнера формы */
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Позволяет контейнеру занимать доступное пространство */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирует содержимое по вертикали */
+}
+label{
+    margin-bottom: 10px;
+}
+
+
+button {
+    height: 60px; /* Увеличение высоты кнопки */
+    background-color: #283618; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    font-size: 1.5em; /* Увеличение размера шрифта в кнопке */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+button:hover {
+    background-color: #FEFAE0; /* Цвет кнопки при наведении */
+    color: #283618; /* Цвет текста кнопки при наведении */
+}
+
+footer {
+    background-color: #283618; /* Цвет футера */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Увеличение отступов подвала */
+    font-size: 1.2em; /* Увеличение размера шрифта в подвале */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin-top:  15px; /* Увеличение отступа между ссылками */
+}
+
+
+.kitchen-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 90%; /* Уменьшаем ширину на маленьких экранах */
+    }
+    h2 {
+        font-size: 1.5em; /* Уменьшаем размер заголовка */
+    }
+    label {
+        font-size: 1em; /* Увеличиваем размер шрифта для меток */
+    }
+    input, select {
+        width: 100%; /* Поля ввода занимают 100% ширины */
+        height: 40px; /* Увеличение высоты полей ввода */
+        font-size: 1em; /* Увеличение размера шрифта в полях */
+    }
+    button {
+        height: 40px; /* Увеличение высоты кнопки */
+        font-size: 1em; /* Увеличение размера шрифта в кнопке */
+    }
+}
+
+
+

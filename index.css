@@ -1,0 +1,669 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Задает минимальную высоту для body */
+    
+}
+
+
+
+
+
+
+
+/*шапка*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFAE0;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 20px;
+}
+
+.navigation a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+
+@media (max-width: 1024px) {
+    .navigation li {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .navigation li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/*начало каритнка и текст*/
+
+body {
+    margin: 0; /* Убираем отступы у body */
+    padding: 0; /* Убираем отступы у body */
+    font-family: Arial, sans-serif; /* Шрифт для всего документа */
+    background-color: #f9f9f9; /* Цвет фона страницы */
+}
+.container {
+    display: flex; /* Используем flexbox для расположения элементов */
+    height: auto; /* Высота контейнера автоматически подстраивается */
+    max-width: 100%; /* Устанавливаем максимальную ширину контейнера */
+   
+    overflow: hidden; /* Скрываем переполнение */
+}
+.container img {
+    width: 50%; /* Ширина изображения 30% */
+    height: auto; /* Высота изображения автоматически подстраивается */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+}
+.text {
+    display: flex; /* Используем flexbox для текста */
+    flex-direction: column; /* Вертикальное расположение текста */
+    justify-content: center; /* Центрируем текст по вертикали */
+    padding: 40px; /* Отступы внутри текстового блока */
+    width: 70%; /* Ширина текстового блока 70% */
+    background-color:  #606C38; /* Цвет фона текстового блока */
+    color: #FEFAE0;
+    font-size: 30px;
+}
+
+/* Адаптивность для экранов до 1024px (ноутбуки) */
+@media (max-width: 1024px) {
+    .text h2 {
+        font-size: 2.5em; /* Увеличиваем размер заголовка */
+    }
+    .text p {
+        font-size: 1.2em; /* Увеличиваем размер текста */
+    }
+
+}
+
+/* Адаптивность для экранов до 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Изменяем направление на колонку */
+        max-width: 100%; /* Устанавливаем максимальную ширину контейнера */
+        margin: 0 0; /* Центрируем контейнер по горизонтали */
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container img {
+        width: 100%; /* Изображение занимает всю ширину */
+        height: auto; /* Высота изображения автоматически подстраивается */
+        
+    }
+   
+  
+    .text {
+        width: 100%; /* Текст занимает всю ширину */
+        padding: 0 5px 0 5px;
+        font-size: 28px;
+    }
+}
+
+/* Адаптивность для экранов до 480px */
+@media (max-width: 480px) {
+    .text h2 {
+        font-size: 40px; /* Увеличиваем размер заголовка */
+        padding-left: 5px;
+    }
+    .text p {
+        padding: 0 5px 0 5px;
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*блоки о нас*/ 
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    background-color:#FEFAE0 ;
+}
+
+.about-us-column {
+    display: flex; /* Используем flex для размещения картинки и текста */
+    align-items: center; /* Центрируем элементы по вертикали */
+    width: 30%; /* 3 колонки в строке */
+    box-sizing: border-box;
+    padding: 30px;
+    padding-top: 0;
+}
+
+.about-us-image {
+    width: 15%; /* Ширина изображения */
+    height: auto;
+    margin-right: 25px; /* Отступ между изображением и текстом */
+}
+
+
+.about-us-text {
+    width: 60%; /* Ширина текстового блока */
+    text-align: left; /* Выравнивание текста влево */
+    font-size: 20px;
+}
+.about-us-title {
+    width: 100%; /* Заголовок занимает всю ширину */
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+    margin-top: 40px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .about-us-column {
+        width: 45%; /* 2 колонки в строке для планшетов */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-title{
+        font-size: 30px;
+    }
+    .about-us-column {
+        width: 100%; /* 1 колонка в строке для мобильных устройств */
+        flex-direction: column; /* Изображение над текстом на мобильных устройствах */
+        align-items: center; /* Центрируем элементы по горизонтали */
+    }
+
+    .about-us-image {
+        width: 15%; /* Увеличиваем ширину изображения на мобильных устройствах */
+        margin-right: 0; /* Убираем отступ справа */
+        margin-bottom: 10px; /* Отступ снизу для изображения */
+    }
+
+    .about-us-text {
+        width: 100%; /* Текст занимает всю ширину */
+        text-align: center; /* Центрируем текст на мобильных устройствах */
+        
+    }
+}
+
+
+
+
+
+
+
+
+/*выгодные предложения*/
+.sale {
+    text-align: center; /* Центрируем текст заголовка */
+    padding: 20px; /* Отступы вокруг блока */
+    background-color: #FEFAE0 ;
+}
+
+.sale-title {
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+    font-size: 35px; /* Размер шрифта заголовка */
+    color: #000000;
+}
+
+.sale-image {
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin-left: auto; /* Центрируем изображение */
+    margin-right: auto; /* Центрируем изображение */
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .sale-title {
+        font-size: 35px; /* Уменьшаем размер шрифта заголовка для планшетов */
+    }
+
+    .sale-image {
+        width: 90%; /* Увеличиваем ширину изображения на планшетах */
+    }
+}
+
+@media (max-width: 768px) {
+    .sale-title {
+        font-size: 40px; /* Уменьшаем размер шрифта заголовка для мобильных устройств */
+    }
+
+    .sale-image {
+        width: 95%; /* Увеличиваем ширину изображения на мобильных устройствах */
+    }
+}
+
+@media (max-width: 480px) {
+    .sale-title {
+        font-size: 25px; /* Уменьшаем размер шрифта заголовка для маленьких экранов */
+    }
+
+    .sale-image {
+        width: 100%; /* Изображение занимает всю ширину на самых маленьких экранах */
+    }
+}
+
+
+
+
+
+
+
+/*расчет стоимости*/
+.container-calc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px 60px 80px;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при необходимости */
+    background-color: #FEFAE0; /* Цвет фона для блока */
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 10px; /* Отступ между текстом и изображением */
+    font-size: 20px;
+}
+
+.image-content {
+    flex: 0 0 300px; /* Фиксированная ширина для изображения */
+}
+
+.image-content img {
+    max-width: 100%; /* Адаптивное изображение */
+    height: auto; /* Сохранение пропорций */
+}
+
+.calculate-button {
+    background-color: #283618; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 15px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 20px; /* Размер шрифта */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.calculate-href{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.calculate-button:hover {
+    background-color: #606C38; /* Цвет фона при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .container-calc {
+        flex-direction: row; /* Горизонтальное расположение на больших экранах */
+    }
+}
+
+@media (max-width: 768px) {
+    .container-calc {
+        flex-direction: column; /* Вертикальное расположение на средних экранах */
+        align-items: center; /* Центрируем содержимое */
+    }
+
+    .text-content {
+        padding-right: 0; /* Убираем отступ справа */
+        text-align: center; /* Центрируем текст */
+        font-size: 20px;
+    }
+
+    .image-content {
+        margin-top: 20px; /* Отступ сверху для изображения */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-content{
+        display: none;
+    }
+    .text-content h1 {
+        font-size: 26px; /* Уменьшаем размер заголовка */
+    }
+
+    .text-content p {
+        font-size: 18px; /* Уменьшаем размер текста */
+    }
+
+    .calculate-button {
+        font-size: 16px; /* Уменьшаем размер текста на кнопке */
+        padding: 8px 16px; /* Уменьшаем отступы внутри кнопки */
+    }
+
+     
+}
+@media (max-width: 320px){
+    .calculate-href{
+        font-size: 13px; 
+    }
+    .calculate-button{
+        padding: 10px 10px 10px ;
+    }
+}
+
+
+
+
+
+
+
+/*отзывы*/
+
+* {
+    box-sizing: border-box;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #606C38;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.review {
+    background-color: #FEFAE0;
+    border: 1px solid #e1e1e1;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(33% - 20px); /* 33% ширины контейнера для 3 блоков */
+    position: relative;
+    overflow: hidden;
+}
+
+.review-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: 2px solid #e1e1e1;
+}
+
+.review-text {
+    margin-left: 80px; /* Отступ от фотографии */
+    font-size: 23px;
+}
+
+.otziv-title {
+    width: 100%; /* Заголовок занимает всю ширину */
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 40px; /* Отступ снизу для заголовка */
+    color: #FEFAE0;
+    margin-top: 50px;
+}
+
+.review-author {
+    margin-left: 80px; /* Отступ от фотографии */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .review {
+        width: calc(50% - 20px); /* 2 блока на экране */
+    }
+}
+
+@media (max-width: 768px) {
+    .review {
+        width: calc(100% - 20px); /* 1 блок на экране */
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .review {
+        padding: 10px;
+    }
+
+    .review-text, .review-author {
+        margin-left: 80px; /* Уменьшаем отступы на малых экранах */
+    }
+}
+
+
+
+
+
+/*вопросы*/
+
+.container-ask {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #FEFAE0 ;
+    font-size: 20px;
+}
+
+.form-section {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+    
+    padding: 20px;
+    
+}
+
+.text-section {
+    flex: 1;
+    min-width: 300px;
+   
+    padding: 20px;
+    
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #283618;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px; /* Размер шрифта */
+}
+
+button:hover {
+    background-color: #606C38;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    
+    .form-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 100%;
+    }
+    select{
+        padding:0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*подвал*/
+footer {
+    background-color: #283618; /* Цвет футера */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Увеличение отступов подвала */
+    font-size: 1.2em; /* Увеличение размера шрифта в подвале */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Увеличение отступа между ссылками */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    
+    h2 {
+        font-size: 1.5em; /* Уменьшаем размер заголовка */
+    }
+    label {
+        font-size: 1em; /* Увеличиваем размер шрифта для меток */
+    }
+    input, select {
+        width: 100%; /* Поля ввода занимают 100% ширины */
+        height: 40px; /* Увеличение высоты полей ввода */
+        font-size: 1em; /* Увеличение размера шрифта в полях */
+    }
+    button {
+        width: 100%; /* Кнопка занимает 100% ширины */
+        height: 40px; /* Увеличение высоты кнопки */
+        font-size: 1em; /* Увеличение размера шрифта в кнопке */
+    }
+}
+
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки для экранов до 1200px */
+    }
+}
+
+@media (max-width: 800px) {
+    .catalog {
+        grid-template-columns: 1fr; /* 1 колонка для экранов до 800px */
+    }
+
+    header {
+        flex-direction: column; /* Вертикальное выравнивание для заголовка на маленьких экранах */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальное выравнивание для навигации */
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0; /* Убираем отступ слева для навигации */
+        margin-bottom: 10px; /* Отступ между элементами навигации */
+    }
+}

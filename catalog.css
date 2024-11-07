@@ -1,0 +1,173 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Задает минимальную высоту для body */
+    background-color: #606C38; /* Фон за формой */
+}
+
+
+/*шапка*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFAE0;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 20px;
+}
+
+.navigation a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+
+@media (max-width: 1024px) {
+    .navigation li {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .navigation li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+}
+
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    background-color: #FEFAE0;
+    border: 1px solid #DDA15E;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Установите фиксированную высоту */
+    object-fit: cover; /* Обеспечивает правильное обрезание изображений */
+}
+
+.card-details {
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: #DDA15E;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c49a4b;
+}
+
+footer {
+    background-color: #283618; /* Цвет футера */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Увеличение отступов подвала */
+    font-size: 1.2em; /* Увеличение размера шрифта в подвале */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Увеличение отступа между ссылками */
+}
+
+
+
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки для экранов до 1200px */
+    }
+}
+
+@media (max-width: 800px) {
+    .catalog {
+        grid-template-columns: 1fr; /* 1 колонка для экранов до 800px */
+    }
+
+    header {
+        flex-direction: column; /* Вертикальное выравнивание для заголовка на маленьких экранах */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальное выравнивание для навигации */
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0; /* Убираем отступ слева для навигации */
+        margin-bottom: 10px; /* Отступ между элементами навигации */
+    }
+}
